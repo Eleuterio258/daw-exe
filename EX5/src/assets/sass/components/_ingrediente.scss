@@ -1,0 +1,99 @@
+.container-receita {
+  display: block !important;
+  h1 {
+    color: $brown;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.2em;
+    line-height: 33px;
+  }
+  .container-ingrediente {
+    margin-top: $s24;
+    font-family: $font-2;
+    background-color: $pink-0;
+    height: 100%;
+    color: $red-2;
+    border-radius: 5px;
+    padding: $s12;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; // Quebra a linha
+    flex-direction: row; //Direção que você deseja
+    .title-ingrediente {
+      color: $brown;
+      font-weight: 900;
+      font-size: 36px;
+      line-height: 65px;
+      background-color: $pastel;
+      border-radius: 50%;
+      width: 70px;
+      min-height: 60px;
+      text-align: center;
+      margin-bottom: $s18;
+      align-self: center;    
+    }
+    &:hover {
+      background-color: $pink-1;
+      cursor: pointer;
+      .title-ingrediente{
+        background-color: lighten($pastel,5%);
+      }
+    }
+    .text-ingrediente{
+      display: block;
+      width: 100%;
+    }
+    h1 {
+      text-align: center;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 22px;
+      text-transform: lowercase;
+    }
+    p {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 12px;
+      margin-bottom: $s6;
+    }
+  }
+}
+
+.theme-dark {
+  h1{
+    color: $pink-0;
+  }
+  .container-receita {
+    .container-ingrediente {
+      background-color: $pink-dark;
+      color: white;
+      .title-ingrediente {
+        background-color: $red;
+        color: $pink-0;
+      }
+      &:hover{
+        background-color: darken($vinho,10%);
+      }
+    }    
+  }
+}
+
+@media (max-width: 500px)
+{
+  .container-ingrediente {
+    h1{
+      font-size: 1em !important;
+    }
+    .title-ingrediente {
+      font-size: 18px !important;
+      line-height: 36px !important;
+      width: 40px !important;
+      min-height: 40px !important;  
+    }
+  }
+  img{
+    width: 80vw;
+  }
+}

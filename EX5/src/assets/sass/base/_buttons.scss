@@ -1,0 +1,139 @@
+.btn-adjust {
+  position: absolute;
+  top: 1%;
+  right: 2%;
+  width: $s36;
+  height: $s36;
+  vertical-align: middle;
+  padding: $s6;
+  font-size: 0.85em;
+  border: none;
+  border-radius: 50%;
+  background: $white;
+  color: $dark;
+  z-index: 2048;
+}
+.btn-adjust:hover {
+  background-color: $dark;
+  color: $white;
+}
+.btn-adjust:active,
+.btn-adjust:focus {
+  border: none;
+  outline: none;
+}
+
+.btn-mini {
+  width: 50px;
+  height: 50px;
+  background-color: $pink-0;
+  border-radius: 8px;
+  border: none;
+  color: $red-2;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  &:active,
+  &:focus {
+    border: none;
+    outline: none;
+  }
+  &:hover {
+    background: $pink-1;
+    cursor: pointer;
+  }
+}
+.delete{
+  background-color: transparent;
+  color: $red;
+  float: right;
+  &:hover{
+    background: $red-2;
+  }
+}
+.edit{
+  background-color: transparent;
+  color: $pink-3;
+  float: right;
+  &:hover{
+    background: $red-2;
+  }
+}
+
+.btn {
+  border-radius: 8px;
+  font-family: $font-2;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 25px;
+  color: $white;
+  &:hover{
+    opacity: 0.8;
+    color: $pastel;
+  }
+}
+.btn-pri{
+  background-color: $red;
+  width: 100%;
+}
+.btn-sec{
+  background-color: $pink-3;
+  width: 100%;
+}
+.theme-dark {
+  .btn-mini{
+    background-color: $red;
+  }
+  .btn-mini-table{
+    background-color: $red;
+  }
+  .delete,.edit{
+    background: transparent;
+    &:hover{
+      background: $red-2;
+    }
+  }
+}
+
+.btn-mini-table {
+  width: 30px;
+  height: 30px;
+  background-color: $pink-0;
+  border-radius: 8px;
+  border: none;
+  color: $red-2;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  &:active,
+  &:focus {
+    border: none;
+    outline: none;
+  }
+  &:hover {
+    background: $pink-1;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: $layout-breakpoint-medium){
+  .btn{
+    margin-top: $s12;
+  }
+}
+@media (max-width: 500px){
+  .btn-mini {
+    width: 25px;
+    height: 25px;
+    i{
+      font-size: 12px;
+    }
+  }
+  .btn-add{
+    vertical-align: middle;
+    align-self: center;
+    margin-right: 0 !important;
+    margin-left: $s24 !important;
+  }
+}

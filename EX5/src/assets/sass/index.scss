@@ -1,0 +1,32 @@
+@import 'base/variables';
+@import 'base/reset';
+@import 'base/texts';
+@import 'base/buttons';
+@import 'base/inputs';
+@import 'base/spacing';
+@import 'base/table';
+
+
+@import 'components/navbar';
+@import 'components/home';
+@import 'components/ingrediente';
+@import 'components/formIngrediente';
+@import 'components/toast';
+
+.all{
+  display: flex;
+  min-height: 100vh;
+}
+.principal{
+  padding: $s36;
+  display: flex;
+}
+.theme-dark{
+  background-color: $dark;
+  color: $white
+}
+@media (max-width: 500px) {
+  .principal{
+    padding: $s48 $s12;
+  }
+}
